@@ -11,8 +11,9 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
-
+        uses: actions/checkout@v1
+        with:
+          working-directory: ./docs/vocab/
       - name: Build
         uses: docker://gokhlayeh/latex
         env:
