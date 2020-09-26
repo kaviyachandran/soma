@@ -19,7 +19,7 @@ jobs:
       - name: Build
         uses: docker://gokhlayeh/latex
         with: 
-          args: make -f Makefile
+          args: make -f .docs/vocab/Makefile
         
       - name: Upload
         uses: actions/upload-artifact@v1
