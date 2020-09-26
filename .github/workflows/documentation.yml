@@ -22,11 +22,12 @@ jobs:
       - name: Build
         uses: docker://gokhlayeh/latex
         with: 
-          args: cd working-directory && make -f Makefile
+          args: cd ./docs/vocab/ && make -f Makefile
         
       - name: Upload
         uses: actions/upload-artifact@v1
         with:
+          args: cd ./docs/vocab/
           name: NEEM Vocabulary
           path: ./docs/vocab/SOMA-vocabulary.pdf
 
