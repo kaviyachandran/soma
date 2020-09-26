@@ -20,7 +20,7 @@ jobs:
         
       - name: Build
         working-directory: ${{env.working-directory}}
-        run: make -f ./docs/vocab/Makefile
+        run: ls -R && make -f Makefile
         
       - name: Upload
         uses: actions/upload-artifact@v1
