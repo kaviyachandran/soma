@@ -8,6 +8,8 @@ jobs:
   vocabulary:
     name: SOMA Vocabulary
     runs-on: ubuntu-latest
+    env:
+      working-directory: ./docs/vocab/
 
     steps:
       - name: Checkout
@@ -16,13 +18,10 @@ jobs:
       - name: Use pythontex
         uses: docker://gokhlayeh/latex
         
-      - name: Set directory
-        working-directory: ./docs/vocab/
-        
       - name: Build
-        with:
-          args: make -f ./docs/vocab/Makefile
-
+        working-directory: ${{env.working-directory}}
+        run: make -f ./docs/vocab/Makefile
+        
       - name: Upload
         uses: actions/upload-artifact@v1
         with:
