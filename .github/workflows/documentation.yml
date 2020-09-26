@@ -15,12 +15,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v1
         
-      - name: Use pythontex
-        uses: docker://gokhlayeh/latex
-        
       - name: Build
-        working-directory: ${{env.working-directory}}
-        run: ls -R && make -f Makefile
+        uses: docker://gokhlayeh/latex
+        with: 
+          args: ls -R && make -f ${{env.working-directory}}Makefile
         
       - name: Upload
         uses: actions/upload-artifact@v1
