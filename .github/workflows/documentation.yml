@@ -12,14 +12,15 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v1
-        with:
-          working-directory: ./docs/vocab/
-      - name: Build
+        
+      - name: Use pythontex
         uses: docker://gokhlayeh/latex
-        env:
-          TEXINPUTS: "/github/workspace/template:"
+        
+      - name: Set directory
+        working-directory: ./docs/vocab/
+        
+      - name: Build
         with:
-          working-directory: ./docs/vocab/
           args: make -f ./docs/vocab/Makefile
 
       - name: Upload
