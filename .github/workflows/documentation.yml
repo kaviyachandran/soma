@@ -22,7 +22,7 @@ jobs:
       - name: Build
         uses: docker://gokhlayeh/latex
         with: 
-          args: cd ./docs/vocab/ && make -f Makefile
+          args: make -f Makefile
         
       - name: Upload
         uses: actions/upload-artifact@v1
