@@ -16,9 +16,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v1
         
-      - name: Debug
-        run: ls -R
-        
       - name: Build
         uses: docker://gokhlayeh/latex
         with: 
@@ -27,9 +24,8 @@ jobs:
       - name: Upload
         uses: actions/upload-artifact@v1
         with:
-          args: cd ./docs/vocab/
           name: NEEM Vocabulary
-          path: ./docs/vocab/SOMA-vocabulary.pdf
+          path: ./SOMA-vocabulary.pdf
 
   handbook:
     name: NEEM Handbook
