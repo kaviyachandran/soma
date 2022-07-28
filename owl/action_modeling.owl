@@ -1,0 +1,273 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/kaviya/ontologies/2022/6/untitled-ontology-47/"
+     xml:base="http://www.semanticweb.org/kaviya/ontologies/2022/6/untitled-ontology-47/"
+     xmlns:DUL="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:SOMA="http://www.ease-crc.org/ont/SOMA.owl#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:SOMA-ACT="http://www.ease-crc.org/ont/SOMA-ACT.owl#">
+    <owl:Ontology rdf:about="http://www.ease-crc.org/ont/action_modeling.owl"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.ease-crc.org/ont/SOMA-ACT.owl#usesRole -->
+
+    <owl:ObjectProperty rdf:about="http://www.ease-crc.org/ont/SOMA-ACT.owl#usesRole"/>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/SOMA.owl#hasInitialScene -->
+
+    <owl:ObjectProperty rdf:about="http://www.ease-crc.org/ont/SOMA.owl#hasInitialScene"/>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/SOMA.owl#hasTerminalScene -->
+
+    <owl:ObjectProperty rdf:about="http://www.ease-crc.org/ont/SOMA.owl#hasTerminalScene"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#definesTask -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#definesTask"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasPart -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasPart"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#includesEvent -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#includesEvent"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#precedes -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#precedes"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.ease-crc.org/ont/SOMA.owl#ActionExecutionPlan -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA.owl#ActionExecutionPlan"/>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/SOMA.owl#AgentRole -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA.owl#AgentRole"/>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/SOMA.owl#Deposit -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA.owl#Deposit"/>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/SOMA.owl#DepositedObject -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA.owl#DepositedObject"/>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/SOMA.owl#EnclosedObject -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA.owl#EnclosedObject"/>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/SOMA.owl#Grasping -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA.owl#Grasping"/>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/SOMA.owl#Lifting -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA.owl#Lifting"/>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/SOMA.owl#LookingAt -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA.owl#LookingAt"/>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/SOMA.owl#PickingUp -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA.owl#PickingUp"/>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/SOMA.owl#Scene -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA.owl#Scene"/>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/SOMA.owl#StateTransition -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA.owl#StateTransition"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.ease-crc.org/ont/action_modeling.owl#AfterGrasping -->
+
+    <owl:NamedIndividual rdf:about="http://www.ease-crc.org/ont/action_modeling.owl#AfterGrasping">
+        <rdf:type rdf:resource="http://www.ease-crc.org/ont/SOMA.owl#Scene"/>
+        <SOMA-ACT:usesRole rdf:resource="http://www.ease-crc.org/ont/action_modeling.owl#AgentRole"/>
+        <SOMA-ACT:usesRole rdf:resource="http://www.ease-crc.org/ont/action_modeling.owl#ContactObjectRole"/>
+        <SOMA-ACT:usesRole rdf:resource="http://www.ease-crc.org/ont/action_modeling.owl#SupportedRole"/>
+        <SOMA-ACT:usesRole rdf:resource="http://www.ease-crc.org/ont/action_modeling.owl#SupportingRole"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/action_modeling.owl#AgentRole -->
+
+    <owl:NamedIndividual rdf:about="http://www.ease-crc.org/ont/action_modeling.owl#AgentRole">
+        <rdf:type rdf:resource="http://www.ease-crc.org/ont/SOMA.owl#AgentRole"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/action_modeling.owl#BeforeGrasping -->
+
+    <owl:NamedIndividual rdf:about="http://www.ease-crc.org/ont/action_modeling.owl#BeforeGrasping">
+        <rdf:type rdf:resource="http://www.ease-crc.org/ont/SOMA.owl#Scene"/>
+        <SOMA-ACT:usesRole rdf:resource="http://www.ease-crc.org/ont/action_modeling.owl#SupportedRole"/>
+        <SOMA-ACT:usesRole rdf:resource="http://www.ease-crc.org/ont/action_modeling.owl#SupportingRole"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/action_modeling.owl#ContactObjectRole -->
+
+    <owl:NamedIndividual rdf:about="http://www.ease-crc.org/ont/action_modeling.owl#ContactObjectRole">
+        <rdf:type rdf:resource="http://www.ease-crc.org/ont/SOMA.owl#EnclosedObject"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Contact can be represented using Image schema Theory with ContactTheory and suitabel roles. A scene individual satisfies Image Schema description.
+- Is this the right type? or can it be Connected Object?</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/action_modeling.owl#GraspingTask -->
+
+    <owl:NamedIndividual rdf:about="http://www.ease-crc.org/ont/action_modeling.owl#GraspingTask">
+        <rdf:type rdf:resource="http://www.ease-crc.org/ont/SOMA.owl#Grasping"/>
+        <DUL:precedes rdf:resource="http://www.ease-crc.org/ont/action_modeling.owl#LiftingTask"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/action_modeling.owl#LiftingTask -->
+
+    <owl:NamedIndividual rdf:about="http://www.ease-crc.org/ont/action_modeling.owl#LiftingTask">
+        <rdf:type rdf:resource="http://www.ease-crc.org/ont/SOMA.owl#Lifting"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/action_modeling.owl#MovingNeckTask -->
+
+    <owl:NamedIndividual rdf:about="http://www.ease-crc.org/ont/action_modeling.owl#MovingNeckTask">
+        <rdf:type rdf:resource="http://www.ease-crc.org/ont/SOMA.owl#LookingAt"/>
+        <DUL:precedes rdf:resource="http://www.ease-crc.org/ont/action_modeling.owl#GraspingTask"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Should this be a type of AssumingPose?? or may be a new concept Moving for moving body parts?. The objective of moving neck is to look at an object</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/action_modeling.owl#PickingUpPlan -->
+
+    <owl:NamedIndividual rdf:about="http://www.ease-crc.org/ont/action_modeling.owl#PickingUpPlan">
+        <rdf:type rdf:resource="http://www.ease-crc.org/ont/SOMA.owl#ActionExecutionPlan"/>
+        <DUL:definesTask rdf:resource="http://www.ease-crc.org/ont/action_modeling.owl#PickingUpTask"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/action_modeling.owl#PickingUpTask -->
+
+    <owl:NamedIndividual rdf:about="http://www.ease-crc.org/ont/action_modeling.owl#PickingUpTask">
+        <rdf:type rdf:resource="http://www.ease-crc.org/ont/SOMA.owl#PickingUp"/>
+        <DUL:hasPart rdf:resource="http://www.ease-crc.org/ont/action_modeling.owl#GraspingTask"/>
+        <DUL:hasPart rdf:resource="http://www.ease-crc.org/ont/action_modeling.owl#LiftingTask"/>
+        <DUL:hasPart rdf:resource="http://www.ease-crc.org/ont/action_modeling.owl#MovingNeckTask"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/action_modeling.owl#SupportedRole -->
+
+    <owl:NamedIndividual rdf:about="http://www.ease-crc.org/ont/action_modeling.owl#SupportedRole">
+        <rdf:type rdf:resource="http://www.ease-crc.org/ont/SOMA.owl#DepositedObject"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/action_modeling.owl#SupportingRole -->
+
+    <owl:NamedIndividual rdf:about="http://www.ease-crc.org/ont/action_modeling.owl#SupportingRole">
+        <rdf:type rdf:resource="http://www.ease-crc.org/ont/SOMA.owl#Deposit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/action_modeling.owl#TransitionGrasping -->
+
+    <owl:NamedIndividual rdf:about="http://www.ease-crc.org/ont/action_modeling.owl#TransitionGrasping">
+        <rdf:type rdf:resource="http://www.ease-crc.org/ont/SOMA.owl#StateTransition"/>
+        <SOMA:hasInitialScene rdf:resource="http://www.ease-crc.org/ont/action_modeling.owl#BeforeGrasping"/>
+        <SOMA:hasTerminalScene rdf:resource="http://www.ease-crc.org/ont/action_modeling.owl#AfterGrasping"/>
+        <DUL:includesEvent rdf:resource="http://www.ease-crc.org/ont/action_modeling.owl#GraspingTask"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.12.2019-05-06T20:49:08Z) https://github.com/owlcs/owlapi -->
+
