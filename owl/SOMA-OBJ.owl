@@ -1659,7 +1659,7 @@ There can be non-physical artificial agents such as software programs but they a
                 <owl:allValuesFrom rdf:resource="http://www.ease-crc.org/ont/SOMA-OBJ.owl#PouredObject"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment>The disposition of a fluid or substance which makes it possible to pour it out of a container and into or onto other objects, a role of some fluid or substance that is the patient of pouring task.</rdfs:comment>
+        <rdfs:comment>The disposition of a fluid or substance which makes it possible to pour it out of a container and into or onto other objects.</rdfs:comment>
     </owl:Class>
     
 
@@ -1668,7 +1668,7 @@ There can be non-physical artificial agents such as software programs but they a
 
     <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA-OBJ.owl#PouredObject">
         <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/SOMA.owl#Patient"/>
-        <rdfs:comment>An object being poured into or onto some other object.</rdfs:comment>
+        <rdfs:comment>An object being poured into or onto some other object. A role of some fluid or substance that is the patient of pouring task.</rdfs:comment>
     </owl:Class>
     
 
@@ -2621,15 +2621,6 @@ The intention behind such a simple role is to have a way to represent, in a sche
     <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA.owl#GoalRole">
         <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/SOMA.owl#EventAdjacentRole"/>
         <rdfs:comment>A role classifying objects that constitute the goal of an action.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://www.ease-crc.org/ont/SOMA.owl#Graspability -->
-
-    <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA.owl#Graspability">
-        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/SOMA.owl#Disposition"/>
-        <rdfs:comment>The disposition of an object (e.g. the handle) to afford grasping the object.</rdfs:comment>
     </owl:Class>
     
 
