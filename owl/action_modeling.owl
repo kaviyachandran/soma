@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://www.semanticweb.org/kaviya/ontologies/2022/6/untitled-ontology-47/"
-     xml:base="http://www.semanticweb.org/kaviya/ontologies/2022/6/untitled-ontology-47/"
+<rdf:RDF xmlns="http://www.ease-crc.org/ont/action_modeling.owl#"
+     xml:base="http://www.ease-crc.org/ont/action_modeling.owl"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:DUL="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -9,7 +10,10 @@
      xmlns:SOMA="http://www.ease-crc.org/ont/SOMA.owl#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:SOMA-ACT="http://www.ease-crc.org/ont/SOMA-ACT.owl#">
-    <owl:Ontology rdf:about="http://www.ease-crc.org/ont/action_modeling.owl"/>
+    <owl:Ontology rdf:about="http://www.ease-crc.org/ont/action_modeling.owl">
+        <owl:imports rdf:resource="http://www.ease-crc.org/ont/SOMA-All.owl"/>
+        <owl:imports rdf:resource="http://www.ease-crc.org/ont/SOMA-IS.owl"/>
+    </owl:Ontology>
     
 
 
@@ -74,6 +78,12 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://www.ease-crc.org/ont/SOMA-IS.owl#ContactTheory -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA-IS.owl#ContactTheory"/>
     
 
 
@@ -158,17 +168,28 @@
 
     <owl:NamedIndividual rdf:about="http://www.ease-crc.org/ont/action_modeling.owl#AfterGrasping">
         <rdf:type rdf:resource="http://www.ease-crc.org/ont/SOMA.owl#Scene"/>
-        <SOMA-ACT:usesRole rdf:resource="http://www.ease-crc.org/ont/action_modeling.owl#AgentRole"/>
-        <SOMA-ACT:usesRole rdf:resource="http://www.ease-crc.org/ont/action_modeling.owl#ContactObjectRole"/>
-        <SOMA-ACT:usesRole rdf:resource="http://www.ease-crc.org/ont/action_modeling.owl#SupportedRole"/>
-        <SOMA-ACT:usesRole rdf:resource="http://www.ease-crc.org/ont/action_modeling.owl#SupportingRole"/>
+        <SOMA-ACT:usesRole rdf:resource="http://www.ease-crc.org/ont/action_modeling.owl#AgentRoleAfterGrasping"/>
+        <SOMA-ACT:usesRole rdf:resource="http://www.ease-crc.org/ont/action_modeling.owl#EnclosedObjectRoleAfterGrasping"/>
+        <SOMA-ACT:usesRole rdf:resource="http://www.ease-crc.org/ont/action_modeling.owl#SupportedRoleBeforeGrasping"/>
+        <SOMA-ACT:usesRole rdf:resource="http://www.ease-crc.org/ont/action_modeling.owl#SupportingRoleBeforeGrasping"/>
+        <DUL:satisfies rdf:resource="http://www.ease-crc.org/ont/action_modeling.owl#ContactTheoryGrasping"/>
+        <DUL:satisfies rdf:resource="http://www.ease-crc.org/ont/action_modeling.owl#SupportTheoryGrasping"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.ease-crc.org/ont/action_modeling.owl#AgentRole -->
+    <!-- http://www.ease-crc.org/ont/action_modeling.owl#AfterLifting -->
 
-    <owl:NamedIndividual rdf:about="http://www.ease-crc.org/ont/action_modeling.owl#AgentRole">
+    <owl:NamedIndividual rdf:about="http://www.ease-crc.org/ont/action_modeling.owl#AfterLifting">
+        <rdf:type rdf:resource="http://www.ease-crc.org/ont/SOMA.owl#Scene"/>
+        <DUL:satisfies rdf:resource="http://www.ease-crc.org/ont/action_modeling.owl#SupportTheoryLifting"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/action_modeling.owl#AgentRoleAfterGrasping -->
+
+    <owl:NamedIndividual rdf:about="http://www.ease-crc.org/ont/action_modeling.owl#AgentRoleAfterGrasping">
         <rdf:type rdf:resource="http://www.ease-crc.org/ont/SOMA.owl#AgentRole"/>
     </owl:NamedIndividual>
     
@@ -178,18 +199,50 @@
 
     <owl:NamedIndividual rdf:about="http://www.ease-crc.org/ont/action_modeling.owl#BeforeGrasping">
         <rdf:type rdf:resource="http://www.ease-crc.org/ont/SOMA.owl#Scene"/>
-        <SOMA-ACT:usesRole rdf:resource="http://www.ease-crc.org/ont/action_modeling.owl#SupportedRole"/>
-        <SOMA-ACT:usesRole rdf:resource="http://www.ease-crc.org/ont/action_modeling.owl#SupportingRole"/>
+        <SOMA-ACT:usesRole rdf:resource="http://www.ease-crc.org/ont/action_modeling.owl#SupportedRoleBeforeGrasping"/>
+        <SOMA-ACT:usesRole rdf:resource="http://www.ease-crc.org/ont/action_modeling.owl#SupportingRoleBeforeGrasping"/>
+        <DUL:satisfies rdf:resource="http://www.ease-crc.org/ont/action_modeling.owl#SupportTheoryGrasping"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.ease-crc.org/ont/action_modeling.owl#ContactObjectRole -->
+    <!-- http://www.ease-crc.org/ont/action_modeling.owl#BeforeLifting -->
 
-    <owl:NamedIndividual rdf:about="http://www.ease-crc.org/ont/action_modeling.owl#ContactObjectRole">
+    <owl:NamedIndividual rdf:about="http://www.ease-crc.org/ont/action_modeling.owl#BeforeLifting">
+        <rdf:type rdf:resource="http://www.ease-crc.org/ont/SOMA.owl#Scene"/>
+        <SOMA-ACT:usesRole rdf:resource="http://www.ease-crc.org/ont/action_modeling.owl#AgentRoleAfterGrasping"/>
+        <SOMA-ACT:usesRole rdf:resource="http://www.ease-crc.org/ont/action_modeling.owl#EnclosedObjectRoleAfterGrasping"/>
+        <SOMA-ACT:usesRole rdf:resource="http://www.ease-crc.org/ont/action_modeling.owl#SupportedRoleBeforeGrasping"/>
+        <SOMA-ACT:usesRole rdf:resource="http://www.ease-crc.org/ont/action_modeling.owl#SupportingRoleBeforeGrasping"/>
+        <DUL:satisfies rdf:resource="http://www.ease-crc.org/ont/action_modeling.owl#ContactTheoryGrasping"/>
+        <DUL:satisfies rdf:resource="http://www.ease-crc.org/ont/action_modeling.owl#SupportTheoryGrasping"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/action_modeling.owl#ContactTheoryGrasping -->
+
+    <owl:NamedIndividual rdf:about="http://www.ease-crc.org/ont/action_modeling.owl#ContactTheoryGrasping">
+        <rdf:type rdf:resource="http://www.ease-crc.org/ont/SOMA-IS.owl#ContactTheory"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/action_modeling.owl#EnclosedObjectRoleAfterGrasping -->
+
+    <owl:NamedIndividual rdf:about="http://www.ease-crc.org/ont/action_modeling.owl#EnclosedObjectRoleAfterGrasping">
         <rdf:type rdf:resource="http://www.ease-crc.org/ont/SOMA.owl#EnclosedObject"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Contact can be represented using Image schema Theory with ContactTheory and suitabel roles. A scene individual satisfies Image Schema description.
 - Is this the right type? or can it be Connected Object?</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/action_modeling.owl#GraspAction -->
+
+    <owl:NamedIndividual rdf:about="http://www.ease-crc.org/ont/action_modeling.owl#GraspAction">
+        <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Action"/>
+        <DUL:executesTask rdf:resource="http://www.ease-crc.org/ont/action_modeling.owl#GraspingTask"/>
     </owl:NamedIndividual>
     
 
@@ -203,6 +256,15 @@
     
 
 
+    <!-- http://www.ease-crc.org/ont/action_modeling.owl#LiftAction -->
+
+    <owl:NamedIndividual rdf:about="http://www.ease-crc.org/ont/action_modeling.owl#LiftAction">
+        <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Action"/>
+        <DUL:executesTask rdf:resource="http://www.ease-crc.org/ont/action_modeling.owl#LiftingTask"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.ease-crc.org/ont/action_modeling.owl#LiftingTask -->
 
     <owl:NamedIndividual rdf:about="http://www.ease-crc.org/ont/action_modeling.owl#LiftingTask">
@@ -211,12 +273,28 @@
     
 
 
-    <!-- http://www.ease-crc.org/ont/action_modeling.owl#MovingNeckTask -->
+    <!-- http://www.ease-crc.org/ont/action_modeling.owl#LocatumSupportGrasping -->
 
-    <owl:NamedIndividual rdf:about="http://www.ease-crc.org/ont/action_modeling.owl#MovingNeckTask">
+    <owl:NamedIndividual rdf:about="http://www.ease-crc.org/ont/action_modeling.owl#LocatumSupportGrasping">
+        <rdf:type rdf:resource="http://www.ease-crc.org/ont/SOMA.owl#LocatumRole"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/action_modeling.owl#LocatumSupportLifting -->
+
+    <owl:NamedIndividual rdf:about="http://www.ease-crc.org/ont/action_modeling.owl#LocatumSupportLifting">
+        <rdf:type rdf:resource="http://www.ease-crc.org/ont/SOMA.owl#LocatumRole"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/action_modeling.owl#LookingAtTask -->
+
+    <owl:NamedIndividual rdf:about="http://www.ease-crc.org/ont/action_modeling.owl#LookingAtTask">
         <rdf:type rdf:resource="http://www.ease-crc.org/ont/SOMA.owl#LookingAt"/>
         <DUL:precedes rdf:resource="http://www.ease-crc.org/ont/action_modeling.owl#GraspingTask"/>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Should this be a type of AssumingPose?? or may be a new concept Moving for moving body parts?. The objective of moving neck is to look at an object</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MovingNeck in Cram is defined as LookingAt. Should this be a type of AssumingPose?? or may be a new concept Moving for moving body parts?. The objective of moving neck is to look at an object</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -236,22 +314,57 @@
         <rdf:type rdf:resource="http://www.ease-crc.org/ont/SOMA.owl#PickingUp"/>
         <DUL:hasPart rdf:resource="http://www.ease-crc.org/ont/action_modeling.owl#GraspingTask"/>
         <DUL:hasPart rdf:resource="http://www.ease-crc.org/ont/action_modeling.owl#LiftingTask"/>
-        <DUL:hasPart rdf:resource="http://www.ease-crc.org/ont/action_modeling.owl#MovingNeckTask"/>
+        <DUL:hasPart rdf:resource="http://www.ease-crc.org/ont/action_modeling.owl#LookingAtTask"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.ease-crc.org/ont/action_modeling.owl#SupportedRole -->
+    <!-- http://www.ease-crc.org/ont/action_modeling.owl#RelatumSupportGrasping -->
 
-    <owl:NamedIndividual rdf:about="http://www.ease-crc.org/ont/action_modeling.owl#SupportedRole">
+    <owl:NamedIndividual rdf:about="http://www.ease-crc.org/ont/action_modeling.owl#RelatumSupportGrasping">
+        <rdf:type rdf:resource="http://www.ease-crc.org/ont/SOMA.owl#RelatumRole"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/action_modeling.owl#RelatumSupportLifting -->
+
+    <owl:NamedIndividual rdf:about="http://www.ease-crc.org/ont/action_modeling.owl#RelatumSupportLifting">
+        <rdf:type rdf:resource="http://www.ease-crc.org/ont/SOMA.owl#RelatumRole"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/action_modeling.owl#SupportTheoryGrasping -->
+
+    <owl:NamedIndividual rdf:about="http://www.ease-crc.org/ont/action_modeling.owl#SupportTheoryGrasping">
+        <rdf:type rdf:resource="http://www.ease-crc.org/ont/SOMA.owl#SupportTheory"/>
+        <DUL:defines rdf:resource="http://www.ease-crc.org/ont/action_modeling.owl#LocatumSupportGrasping"/>
+        <DUL:defines rdf:resource="http://www.ease-crc.org/ont/action_modeling.owl#RelatumSupportGrasping"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A rule should be defined to infer the supported object plays the locatum role and the supporting object plays the relatum role.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/action_modeling.owl#SupportTheoryLifting -->
+
+    <owl:NamedIndividual rdf:about="http://www.ease-crc.org/ont/action_modeling.owl#SupportTheoryLifting">
+        <rdf:type rdf:resource="http://www.ease-crc.org/ont/SOMA.owl#SupportTheory"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/action_modeling.owl#SupportedRoleBeforeGrasping -->
+
+    <owl:NamedIndividual rdf:about="http://www.ease-crc.org/ont/action_modeling.owl#SupportedRoleBeforeGrasping">
         <rdf:type rdf:resource="http://www.ease-crc.org/ont/SOMA.owl#DepositedObject"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.ease-crc.org/ont/action_modeling.owl#SupportingRole -->
+    <!-- http://www.ease-crc.org/ont/action_modeling.owl#SupportingRoleBeforeGrasping -->
 
-    <owl:NamedIndividual rdf:about="http://www.ease-crc.org/ont/action_modeling.owl#SupportingRole">
+    <owl:NamedIndividual rdf:about="http://www.ease-crc.org/ont/action_modeling.owl#SupportingRoleBeforeGrasping">
         <rdf:type rdf:resource="http://www.ease-crc.org/ont/SOMA.owl#Deposit"/>
     </owl:NamedIndividual>
     
@@ -263,7 +376,18 @@
         <rdf:type rdf:resource="http://www.ease-crc.org/ont/SOMA.owl#StateTransition"/>
         <SOMA:hasInitialScene rdf:resource="http://www.ease-crc.org/ont/action_modeling.owl#BeforeGrasping"/>
         <SOMA:hasTerminalScene rdf:resource="http://www.ease-crc.org/ont/action_modeling.owl#AfterGrasping"/>
-        <DUL:includesEvent rdf:resource="http://www.ease-crc.org/ont/action_modeling.owl#GraspingTask"/>
+        <DUL:includesEvent rdf:resource="http://www.ease-crc.org/ont/action_modeling.owl#GraspAction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/action_modeling.owl#TransitionLifting -->
+
+    <owl:NamedIndividual rdf:about="http://www.ease-crc.org/ont/action_modeling.owl#TransitionLifting">
+        <rdf:type rdf:resource="http://www.ease-crc.org/ont/SOMA.owl#StateTransition"/>
+        <SOMA:hasInitialScene rdf:resource="http://www.ease-crc.org/ont/action_modeling.owl#BeforeLifting"/>
+        <SOMA:hasTerminalScene rdf:resource="http://www.ease-crc.org/ont/action_modeling.owl#AfterLifting"/>
+        <DUL:includesEvent rdf:resource="http://www.ease-crc.org/ont/action_modeling.owl#LiftAction"/>
     </owl:NamedIndividual>
 </rdf:RDF>
 
