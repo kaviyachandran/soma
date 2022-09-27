@@ -324,7 +324,7 @@ This can also mean up or down in an abstract way.</rdfs:comment>
     <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA.owl#MovingTo">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isDefinedIn"/>
+                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isDescribedBy"/>
                 <owl:someValuesFrom rdf:resource="http://www.ease-crc.org/ont/SOMA-IS.owl#PathGoalTheory"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -341,6 +341,7 @@ This can also mean up or down in an abstract way.</rdfs:comment>
                 <owl:someValuesFrom rdf:resource="http://www.ease-crc.org/ont/SOMA.owl#SourcePathGoalTheory"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">How do we relate it to self motion theory?</rdfs:comment>
     </owl:Class>
     
 
