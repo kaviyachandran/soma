@@ -19,6 +19,13 @@ This module is chiefly concerned with defining a taxonomy of tasks, including ro
 
 Also defined here are execution state regions, i.e. flags with which to label the status of the execution of an action in terms of whether it is unfolding or completed, and if completed whether completed successfully or not.")
 
+Declaration(Class(:MoveDown))
+Declaration(Class(:MoveLeft))
+Declaration(Class(:MoveRight))
+Declaration(Class(:MoveUp))
+Declaration(Class(:TiltBackward))
+Declaration(Class(:TiltForward))
+Declaration(Class(:Tilting))
 Declaration(Class(SOMA:AbductiveReasoning))
 Declaration(Class(SOMA:Actuating))
 Declaration(Class(SOMA:Answer))
@@ -483,6 +490,41 @@ SubObjectPropertyOf(<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isTas
 ############################
 #   Classes
 ############################
+
+# Class: :MoveDown (:MoveDown)
+
+AnnotationAssertion(rdfs:comment :MoveDown "A task in which an Agent adjusts the position of an object downward with respect to another object")
+SubClassOf(:MoveDown SOMA:Positioning)
+
+# Class: :MoveLeft (:MoveLeft)
+
+AnnotationAssertion(rdfs:comment :MoveLeft "A task in which an Agent adjusts the position of an object with respect to another object")
+SubClassOf(:MoveLeft SOMA:Positioning)
+
+# Class: :MoveRight (:MoveRight)
+
+AnnotationAssertion(rdfs:comment :MoveRight "A task in which an Agent adjusts the position of an object towards right with respect to another object")
+SubClassOf(:MoveRight SOMA:Positioning)
+
+# Class: :MoveUp (:MoveUp)
+
+AnnotationAssertion(rdfs:comment :MoveUp "A task in which an Agent adjusts the position of an object upwards with respect to another object")
+SubClassOf(:MoveUp SOMA:Positioning)
+
+# Class: :TiltBackward (:TiltBackward)
+
+AnnotationAssertion(rdfs:comment :TiltBackward "A task by which an Agent tilts an object backwards away from another object with control")
+SubClassOf(:TiltBackward :Tilting)
+
+# Class: :TiltForward (:TiltForward)
+
+AnnotationAssertion(rdfs:comment :TiltForward "A task by which an Agent tilts an object forward towards another object with control")
+SubClassOf(:TiltForward :Tilting)
+
+# Class: :Tilting (:Tilting)
+
+AnnotationAssertion(rdfs:comment :Tilting "A task by which an Agent tilts an object with control")
+SubClassOf(:Tilting SOMA:Actuating)
 
 # Class: SOMA:AbductiveReasoning (Abductive reasoning)
 

@@ -32,6 +32,8 @@ This is related to a design decision between \"primacy of objects\" and \"primac
 
 We do not argue here that one of these approaches is better -- they seem equally powerful in terms of what they can express. Our decision for primacy of objects is merely an aesthetic choice based on what seemed more intuitive.")
 
+Declaration(Class(:NonVerticalObject))
+Declaration(Class(:VerticalObject))
 Declaration(Class(SOMA:Accessor))
 Declaration(Class(SOMA:AestheticDesign))
 Declaration(Class(SOMA:Affordance))
@@ -198,6 +200,7 @@ Declaration(Class(SOMA:Variability))
 Declaration(Class(<http://www.ease-crc.org/ont/SOMA.owl#3DPosition>))
 Declaration(Class(<http://www.ease-crc.org/ont/SOMA.owl#6DPose>))
 Declaration(Class(<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Design>))
+Declaration(ObjectProperty(:is_outside_of))
 Declaration(ObjectProperty(SOMA:affordanceDefines))
 Declaration(ObjectProperty(SOMA:affordanceDefinesTask))
 Declaration(ObjectProperty(SOMA:affordsBearer))
@@ -310,6 +313,13 @@ Declaration(DataProperty(SOMA:hasWidth))
 ############################
 #   Object Properties
 ############################
+
+# Object Property: :is_outside_of (is outside of)
+
+AnnotationAssertion(rdfs:comment :is_outside_of "A spatial relation holding between an object (the container), and objects it contains but when the object does not enter the container.")
+AnnotationAssertion(rdfs:label :is_outside_of "is outside of")
+SubObjectPropertyOf(:is_outside_of <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasLocation>)
+DisjointObjectProperties(:is_outside_of SOMA:isInsideOf)
 
 # Object Property: SOMA:affordanceDefines (affordance defines)
 
@@ -1191,6 +1201,15 @@ DataPropertyRange(SOMA:hasWidth xsd:float)
 #   Classes
 ############################
 
+# Class: :NonVerticalObject (:NonVerticalObject)
+
+SubClassOf(:NonVerticalObject SOMA:EventAdjacentRole)
+DisjointClasses(:NonVerticalObject :VerticalObject)
+
+# Class: :VerticalObject (:VerticalObject)
+
+SubClassOf(:VerticalObject SOMA:EventAdjacentRole)
+
 # Class: SOMA:Accessor (SOMA:Accessor)
 
 AnnotationAssertion(rdfs:comment SOMA:Accessor "A role classifying an object used to gain access to some other entity.")
@@ -1581,7 +1600,7 @@ AnnotationAssertion(rdfs:comment SOMA:EventAdjacentRole "A role classifying a pa
 In linguistics, this is also known as a thematic role.")
 AnnotationAssertion(rdfs:label SOMA:EventAdjacentRole "Event adjacent role"@en)
 AnnotationAssertion(rdfs:label SOMA:EventAdjacentRole "Thematic role"@en)
-SubClassOf(SOMA:EventAdjacentRole <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Role>)
+EquivalentClasses(SOMA:EventAdjacentRole <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Role>)
 
 # Class: SOMA:ExcludedObject (Excluded object)
 

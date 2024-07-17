@@ -38,6 +38,7 @@ Declaration(Class(SOMA:Reification))
 Declaration(Class(SOMA:Scene))
 Declaration(Class(SOMA:Sluggishness))
 Declaration(Class(SOMA:SoftwareDiagnosis))
+Declaration(Class(SOMA:Spilling))
 Declaration(Class(SOMA:State))
 Declaration(Class(SOMA:StateTransition))
 Declaration(Class(SOMA:Status))
@@ -919,6 +920,11 @@ SubClassOf(SOMA:Sluggishness SOMA:Amateurish)
 AnnotationAssertion(rdfs:comment SOMA:SoftwareDiagnosis "A diagnosis of the software of a system.")
 AnnotationAssertion(rdfs:label SOMA:SoftwareDiagnosis "Software diagnosis")
 SubClassOf(SOMA:SoftwareDiagnosis SOMA:TechnicalDiagnosis)
+
+# Class: SOMA:Spilling (SOMA:Spilling)
+
+AnnotationAssertion(rdfs:comment SOMA:Spilling "While pouring, when the contents accidentally end up outside the container")
+SubClassOf(SOMA:Spilling SOMA:Accident)
 
 # Class: SOMA:State (SOMA:State)
 

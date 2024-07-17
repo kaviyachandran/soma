@@ -14,6 +14,7 @@ Annotation(rdfs:comment "SOMA-SAY.owl defines concepts related to natural langua
 
 In particular, it defines concepts related to linguistic acts and structures of syntax and meaning.")
 
+Declaration(Class(SOMA:VerticalityTheory))
 Declaration(Class(SOMA:CausedMotionTheory))
 Declaration(Class(SOMA:ClausalObject))
 Declaration(Class(SOMA:ContainmentTheory))
@@ -100,6 +101,10 @@ ObjectPropertyRange(SOMA:movesObject <http://www.ontologydesignpatterns.org/ont/
 ############################
 #   Classes
 ############################
+
+# Class: SOMA:VerticalityTheory (:VerticalityTheory)
+
+SubClassOf(SOMA:VerticalityTheory SOMA:ImageSchemaTheory)
 
 # Class: SOMA:AssertionTask (Assertion task)
 
